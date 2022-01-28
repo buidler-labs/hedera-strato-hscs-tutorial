@@ -1,0 +1,19 @@
+{
+  "name": "hedera-strato-hcs-tutorial",
+  "version": "1.0.0",
+  "description": "A follow-along to Hedera's official HCS tutorial series",
+  "engines": {
+    "node": ">=16"
+  },
+  "main": "main.mjs",
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "keywords": [],
+  "author": "BuiDler Labs Developers <devs@buidlerlabs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@buidlerlabs/hedera-strato-js": "^0.6.10",
+    "@hashgraph/sdk": "^2.7.1"
+  }
+}
