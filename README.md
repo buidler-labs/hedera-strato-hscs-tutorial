@@ -1,8 +1,8 @@
-# Hedera Strato - HCS Tutorial follow-along
+# Hedera Strato - HSCS 2.0 Tutorial follow-along
 ``` bash
 $ npm start
 
-> hedera-strato-hcs-tutorial@1.0.0 start
+> hedera-strato-hscs-tutorial@1.0.0 start
 > node main.mjs
 
 Creating a Strato API Session.
@@ -31,13 +31,15 @@ console.log(`Alice's phone number: ${await liveContract.getMobileNumber("Alice")
 console.log(`Bob's phone number: ${await liveContract.getMobileNumber("Bob")}`);
 ```
 
-At its essence, in only 6 lines of code, it shows you how to load, compile, upload execute and query a smart contract on the hedera network using strato, a more human-friendly sdk for Hedera development. To find more about the library's capabilties and roadmap, [please check its official repo](https://github.com/buidler-labs/hedera-strato-js).
+At its essence, in only 6 lines of code, it shows you how to load, compile, upload execute and query a smart contract on the Hedera network using strato, a more human-friendly sdk for developing on the hashgraph. Compare this to [the official sdk implementation](https://github.com/ed-marquez/hedera-example-contract-getter-setter/blob/master/index.js) of the same functionality (minus the compilation part which is done offline) and spot the differences yourself. 
+
+To find more about the library's capabilties, roadmap and more, [please check and join the discussion at its official repo](https://github.com/buidler-labs/hedera-strato-js).
 
 ## Firing it up
 
 Before diving in, just make sure you have a [node CLI](https://nodejs.org/en/download/) version `>=16` installed then do the normal
 ```
-git clone https://github.com/buidler-labs/hedera-strato-hcs-tutorial.git
+git clone https://github.com/buidler-labs/hedera-strato-hscs-tutorial.git
 npm install
 ```
 to fetch the repo and its dependencies.
