@@ -1,14 +1,18 @@
 # Hedera Strato - HCS Tutorial follow-along
 ``` bash
 $ npm start
+
+> hedera-strato-hcs-tutorial@1.0.0 start
+> node main.mjs
+
 Creating a Strato API Session.
-Loading and compiling the LookupContrat code.
-Uploading the contract to Hedera.
-Contract is live at 0.0.29567029
-Alice's phone number is: 111111
+Loading and compiling the LookupContract code.
+Uploading the contract to Hedera with Alice's initial phone number.
+Contract is live at 0.0.29567092
+Alice's phone number stored on contract is: 111111
 Registering Bob's phone number.
 Looking up Bob's phone number.
-Bob's phone number is: 222222
+Bob's, contract-stored, phone number is: 222222
 ```
 
 This repo is the [hedera-strato-js](https://github.com/buidler-labs/hedera-strato-js) adaptation of Hedera's part 1 tutorial series titled "How To Deploy Smart Contracts on Hedera" ([video](https://youtu.be/L9Tm6yn_ayY), [article](https://hedera.com/blog/how-to-deploy-smart-contracts-on-hedera-part-1-a-simple-getter-and-setter-contract)). 
