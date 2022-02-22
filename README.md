@@ -19,9 +19,9 @@ This repo is the [hedera-strato-js](https://github.com/buidler-labs/hedera-strat
 
 Although the [main](./main.mjs) code might look intimidating at first with its whopping 25 lines of code, most of it are logs which, if stripped away, yeilds the true underlying beauty of our strato endevour:
 ``` js
-const hapiSession = await HederaNetwork.defaultApiSession();
+const { session } = await ApiSession.default();
 const lookupContract = await Contract.newFrom({ path: './LookupContract.sol', ignoreWarnings: true });
-const liveContract = await hapiSession.upload(lookupContract, { _contract: { gas: 100000 } }, 
+const liveContract = await session.upload(lookupContract, { _contract: { gas: 100000 } }, 
     "Alice", 
     111111
 );
@@ -47,9 +47,9 @@ to fetch the repo and its dependencies.
 Lastly, you will need to define a local `.env` file providing some values for the library to work with. Please see the [`.env.sample`](./.env.sample) for info and further details. Assuming you are using a `testnet` account, the minimum required `.env` defined values should look quite similar to:
 
 ```
-HEDERA_NETWORK=testnet
-HEDERA_OPERATOR_ID=0.0...
-HEDERA_OPERATOR_KEY=91132178...
+HEDERAS_NETWORK=testnet
+HEDERAS_OPERATOR_ID=0.0...
+HEDERAS_OPERATOR_KEY=91132178...
 ```
 
 If you don't know how to create a free testnet account, [follow Ed's excelent walkthrough](https://www.youtube.com/watch?v=L9Tm6yn_ayY&t=88s). 

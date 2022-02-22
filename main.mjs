@@ -1,17 +1,17 @@
 import { 
-    HederaNetwork, 
+    ApiSession,
     Contract 
 } from '@buidlerlabs/hedera-strato-js';
 import { ContractId } from '@hashgraph/sdk';
 
 console.log("Creating a Strato API Session.");
-const hapiSession = await HederaNetwork.defaultApiSession();
+const { session } = await ApiSession.default();
 
 console.log("Loading and compiling the LookupContract code.");
 const lookupContract = await Contract.newFrom({ path: './LookupContract.sol', ignoreWarnings: true });
 
 console.log("Uploading the contract to Hedera with Alice's initial phone number.");
-const liveContract = await hapiSession.upload(lookupContract, { _contract: { gas: 100000 } }, 
+const liveContract = await session.upload(lookupContract, { _contract: { gas: 100000 } }, 
     "Alice", 
     111111
 );
